@@ -1,13 +1,23 @@
 'use client';
 // import Image from 'next/image';
 import Head from 'next/head';
+import Link from 'next/link';
 
+ const pkg = {
+  linkTo: "/checkout",
+  totalPrice: "$39.99",
+};
+const pkg2 = {
+  linkTo: "/advanced-checkout",
+  totalPrice: "$59.99",
+};
 export default function TruckHistoryPage() {
+
   return (
     <>
 
       <div
-        className="page-title-area overlay-bg style-1 bg-cover bg-center py-20 text-white"
+        className="page-title-area overlay-bg style-1 bg-cover bg-center bg-black py-20 text-white"
         style={{
           backgroundImage:
             "url('https://autoshistoryrecord.com/wp-content/uploads/2023/02/about-us-banner-img.jpg')",
@@ -61,7 +71,7 @@ export default function TruckHistoryPage() {
           </div>
           <div>
             <img
-              src="https://autoshistoryrecord.com/wp-content/uploads/2024/07/360_F_316547216_dWtyfz5sRJQkbSI8dRc8L5uD0DsgzqMT.jpg"
+              src="images/truck121.jpg"
               alt="Truck Maintenance"
               width={600}
               height={400}
@@ -82,14 +92,14 @@ export default function TruckHistoryPage() {
             className="text-black font-semibold hover:text-red-950 shake-hover transition duration-200 ease-in-out"
           >Truck History Report
           </a>
-          <a href="/van-history"
+          {/* <a href="/van-history"
             className="text-black font-semibold hover:text-red-950 shake-hover transition duration-200 ease-in-out"
           >Van History Report
           </a>
           <a href="/rv-history"
             className="text-black font-semibold hover:text-red-950e shake-hover transition duration-200 ease-in-out"
           >RV History Report
-          </a>
+          </a> */}
           <a href="/bike-history"
             className="text-black font-semibold hover:text-red-950 shake-hover transition duration-200 ease-in-out"
           >Bike History Report
@@ -117,11 +127,11 @@ export default function TruckHistoryPage() {
             <div className="bg-white shadow-xl rounded-xl p-6 md:p-8 text-center transition-all hover:scale-105 duration-300">
               <div className="text-sm font-semibold text-gray-500 mb-2">TAT: 12 To 24 Hours</div>
               <img
-                src="https://autoshistoryrecord.com/wp-content/uploads/2023/02/hosting-img-1.svg"
+                src="images/Group 44.png"
                 alt="starter"
                 className="w-16 h-16 mx-auto mb-4"
               />
-              <h3 className="text-xl font-bold mb-4 text-black">SUPER</h3>
+              <h3 className="text-xl font-bold mb-4 text-black">BASIC PLAN PACKAGE</h3>
               <ul className="text-left text-sm space-y-3 text-black">
                 {[
                   "Vehicle Overview",
@@ -138,7 +148,7 @@ export default function TruckHistoryPage() {
                 ].map((item, i) => (
                   <li key={i} className="flex items-start space-x-3">
                     <img
-                      src="https://autoshistoryrecord.com/wp-content/plugins/natix-toolkit/assets/images/plan-box-default-img.svg"
+                      src="images/tick.png"
                       alt="check"
                       className="w-5 h-5 mt-1"
                     />
@@ -147,18 +157,17 @@ export default function TruckHistoryPage() {
                 ))}
               </ul>
               <div className="mt-6">
-                <small className="text-gray-500">Starting at:</small>
-                <h2 className="text-2xl font-bold">$9.<span className="text-lg">99</span></h2>
+                <small className="text-gray-500">Only For:</small>
+                <h2 className="text-2xl font-bold">$39.<span className="text-lg">99</span></h2>
               </div>
-              <a
-                href="/product/super"
-                className="inline-block mt-4 px-6 py-2 bg-red-400 text-white font-semibold rounded-full shake-hover transition"
-              >
-                Order Now
-              </a>
+               <Link href={pkg.linkTo}>
+                <button className="bg-yellow-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-black transition">
+                    Buy Now {pkg.totalPrice}
+                </button>
+            </Link>
             </div>
 
-            {/* FAST TRACK (POPULAR) Plan */}
+            {/* FAST TRACK (POPULAR) Plan
             <div className="bg-white shadow-xl rounded-xl p-6 md:p-8 text-center transition-all hover:scale-105 duration-300">
               <div className="text-sm font-semibold text-gray-500 mb-2">TAT: 60 Minutes</div>
               <div className="flex justify-center mb-4">
@@ -215,21 +224,21 @@ export default function TruckHistoryPage() {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* EXCLUSIVE Plan */}
             <div className="bg-white shadow-xl rounded-xl p-6 md:p-8 text-center transition-all hover:scale-105 duration-300">
-              <div className="text-sm text-gray-600 mb-2">TAT: 30 Minutes</div>
+              <div className="text-sm text-gray-600 mb-2">TAT: 1 TO 2 HOURS</div>
               <img
-                src="https://autoshistoryrecord.com/wp-content/uploads/2023/02/hosting-img-3.svg"
+                src="images/prime.png"
                 alt="Prime Plan Icon"
                 className="mx-auto mb-4 w-14 h-14"
               />
-              <h3 className="text-xl font-semibold mb-4 text-black">EXCLUSIVE</h3>
+              <h3 className="text-xl font-semibold mb-4 text-black">PRIME PLAN PACKAGE</h3>
               <ul className="text-left space-y-3 text-black">
                 {[
-                  "Buy one get one free Report",
-                  "High Quality Car Images",
+                  // "Buy one get one free Report",
+                  // "High Quality Car Images",
                   "Vehicle Specifications",
                   "Market Value",
                   "Accident Record",
@@ -247,7 +256,7 @@ export default function TruckHistoryPage() {
                 ].map((item, index) => (
                   <li key={index} className="flex items-start">
                     <img
-                      src="https://autoshistoryrecord.com/wp-content/uploads/2023/02/dedicated-img-9.svg"
+                      src="images/tick.png"
                       alt=""
                       className="w-5 h-5 mt-1 mr-3" />
                     <span className="text-sm">{item}</span>
@@ -255,17 +264,16 @@ export default function TruckHistoryPage() {
                 ))}
               </ul>
               <div className="mt-6">
-                <small className="block text-gray-500">Starting at:</small>
+                <small className="block text-gray-500">Only For:</small>
                 <h2 className="text-3xl font-bold text-black">
-                  $19.<span className="text-xl font-normal">99</span>{" "}
-                  <small className="text-sm font-normal text-gray-500">/mo</small>
+                  $59.<span className="text-xl font-normal">99</span>{" "}
+                  <small className="text-sm font-normal text-gray-500"></small>
                 </h2>
-                <a
-                  href="/product/exclusive"
-                  className="inline-block mt-4 bg-indigo-400 text-white px-6 py-2 rounded-full shake-hover transition"
-                >
-                  Order Now
-                </a>
+                 <Link href={pkg2.linkTo}>
+                <button className="bg-yellow-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-black transition">
+                    Buy Now {pkg2.totalPrice}
+                </button>
+            </Link>
               </div>
             </div>
           </div>

@@ -30,7 +30,7 @@ const Navbar = () => {
         {/* Hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-white focus:outline-none"
+          className="md:hidden text-Black focus:outline-none"
         >
           <span className="block w-6 h-0.5 bg-white mb-1" />
           <span className="block w-6 h-0.5 bg-white mb-1" />
