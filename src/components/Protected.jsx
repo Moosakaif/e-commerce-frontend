@@ -16,7 +16,7 @@ export default function Footer() {
         >
           Truck History Report
         </a>
-        <a
+        {/* <a
           href="/van-history"
           className="text-black font-semibold hover:text-red-950 shake-hover transition duration-200 ease-in-out"
         >
@@ -27,7 +27,7 @@ export default function Footer() {
           className="text-black font-semibold hover:text-red-950e shake-hover transition duration-200 ease-in-out"
         >
           RV History Report
-        </a>
+        </a> */}
         <a
           href="/bike-history"
           className="text-black font-semibold hover:text-red-950 shake-hover transition duration-200 ease-in-out"
